@@ -1,0 +1,22 @@
+O Database vai receber as informações da teabela clientes com um select vindo da tabela de carga
+  Se nao existir vai inserir as informações
+
+SQL DE INSERT
+  INSET INTO Clientes (nome, email, cpf) SELECT
+  TC.nomeComprador, TC.emailComprador, TC.cpf
+  FROM Carga Tc
+  LEFT JOIN Clientes TCL on (TC.cpf = TCL.cpf)
+  WHERE TCL.cpf is NULL
+
+
+  SELECT Tc.Id, Tc.Email. Tcl.ID, Tcl.Email FROM CARGA tc
+  LEFT JOIN cliente Tcl on (Tc.Email = Tcl.Email)
+  WHERE Tcl.Email is NULL
+
+>>>>>>>>>>>>>>>>>>>INSERT DE PEDIDOS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INSERT INTO itempedido (produtoID, Quantidade, preçoUnitário) SELECT
+TC.SKU, TC.Quantidade, TC.Valor FROM Carga TC
+LEFT JOIN itempedido TIP on (TC.SKU = TIP.produtoID)
+WHERE TIP.produtoID is NULL
+
+verificar se o produto pedido está disponível no estoque
