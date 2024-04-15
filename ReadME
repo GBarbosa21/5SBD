@@ -14,9 +14,10 @@ SQL DE INSERT
   WHERE Tcl.Email is NULL
 
 >>>>>>>>>>>>>>>>>>>INSERT DE PEDIDOS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-INSERT INTO itempedido (produtoID, Quantidade, preçoUnitário) SELECT
-TC.SKU, TC.Quantidade, TC.Valor FROM Carga TC
-LEFT JOIN itempedido TIP on (TC.SKU = TIP.produtoID)
-WHERE TIP.produtoID is NULL
+INSERT INTO itempedido (produto_id, Quantidade, preço_unitario) SELECT
+TC.SKU, TC.Qntd_produto, TC.Valor FROM Carga TC
+LEFT JOIN itempedido TIP on (TC.SKU = TIP.produto_id)
+WHERE itempedido.produto_id IS NULL;
+
 
 verificar se o produto pedido está disponível no estoque
