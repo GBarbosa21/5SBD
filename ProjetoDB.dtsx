@@ -1,0 +1,925 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/29/2024 12:00:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-OU72S9MM"
+  DTS:CreatorName="LAPTOP-OU72S9MM\gugab"
+  DTS:DTSID="{8960F8BE-BEA6-4C01-A807-899C469A0219}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="ProjetoDB"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{A5D06D53-E3A7-4483-99C8-3AC5BCFA1113}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[5SBD]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DA10AB61-D481-4F11-932A-E7FC37D42551}"
+      DTS:ObjectName="5SBD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\gugab\Downloads\carga (1).csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id_cargas"
+              DTS:DTSID="{812295F3-B228-4118-9635-4EBD7838A1F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cod_Produto"
+              DTS:DTSID="{3979D915-AACE-4D5F-92A6-40268A175C65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="data_pedido"
+              DTS:DTSID="{FC807DD0-CB6F-441C-8BD1-43F2D23CCC87}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SKU"
+              DTS:DTSID="{5C63C9CB-67D0-4E90-8B7D-037A85077C4C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UPC"
+              DTS:DTSID="{22162CFB-20EA-4E06-9FBA-65B40BEA7DB6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Qntd_produto"
+              DTS:DTSID="{AC6DBA31-C345-4A3B-8F58-BD31D6A0907F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Valor"
+              DTS:DTSID="{4C28528F-D409-49B2-AA24-032D3A05DD91}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Frete"
+              DTS:DTSID="{1106FF98-F590-4B3C-9C34-96E95AA1A83E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="19"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="email"
+              DTS:DTSID="{4CD7BF26-A308-41A2-B299-12A81435D782}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nomeComprador"
+              DTS:DTSID="{D5F5131B-430C-4D0D-96B6-734A3B0728BD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cpf"
+              DTS:DTSID="{B2B28FF5-1F5E-4A5C-9197-9E8AF89394BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="17"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="endereco"
+              DTS:DTSID="{7F1485E8-9A61-4E94-A55D-2565BF09C2A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CEP"
+              DTS:DTSID="{0F150767-3E22-4D16-B325-E62D6FAAD3C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pais"
+              DTS:DTSID="{634BD9D7-E5CD-44AD-8E1D-D22C87E5619E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-OU72S9MM.5SBD]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{E42F17A0-81BA-43F5-9F99-707E61138B22}"
+      DTS:ObjectName="LAPTOP-OU72S9MM.5SBD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-OU72S9MM;Initial Catalog=5SBD;Integrated Security=True;Encrypt=False;Application Name=SSIS-Package-{E42F17A0-81BA-43F5-9F99-707E61138B22}LAPTOP-OU72S9MM.5SBD;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Upload de Dados"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{33B55FD4-D1E1-4561-B0F9-413096DE890F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Upload de Dados"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Upload de Dados\5SBD"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carrega dados em um banco de dados em conformidade com ADO.NET que usa uma tabela ou exibição de banco de dados. Carregue dados em uma tabela nova ou existente. por exemplo, use um provedor ADO.NET para ODBC para carregar dados em um destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;2"
+              description="Carrega dados em um banco de dados em conformidade com ADO.NET que usa uma tabela ou exibição de banco de dados. Carregue dados em uma tabela nova ou existente. por exemplo, use um provedor ADO.NET para ODBC para carregar dados em um destino ODBC."
+              name="5SBD"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="O nome da tabela de banco de dados de Destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"5SBD"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique o número de linhas por lote. O padrão é 0, que usa o mesmo tamanho que o buffer interno SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="O número de segundos antes de o tempo limite de um comando ser alcançado. Um valor de 0 indica um tempo limite infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se a interface SqlBulkCopy deve ser usada para melhorar o desempenho de operações de inserção em massa. Somente determinados provedores oferecem suporte a essa interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Upload de Dados\5SBD.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-OU72S9MM.5SBD]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-OU72S9MM.5SBD]"
+                  description="Gerenciador de conexões gerenciadas"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[Id_cargas]"
+                      cachedDataType="i1"
+                      cachedName="Id_cargas"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[Id_cargas]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Id_cargas]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[cod_Produto]"
+                      cachedDataType="i2"
+                      cachedName="cod_Produto"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[cod_Produto]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[cod_Produto]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[data_pedido]"
+                      cachedDataType="date"
+                      cachedName="data_pedido"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[data_pedido]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[data_pedido]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[SKU]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="SKU"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[SKU]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[SKU]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[UPC]"
+                      cachedDataType="r4"
+                      cachedName="UPC"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[UPC]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[UPC]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[Qntd_produto]"
+                      cachedDataType="i1"
+                      cachedName="Qntd_produto"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[Qntd_produto]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Qntd_produto]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[Valor]"
+                      cachedDataType="r4"
+                      cachedName="Valor"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[Valor]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Valor]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[Frete]"
+                      cachedDataType="r4"
+                      cachedName="Frete"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[Frete]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Frete]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="19"
+                      cachedName="email"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[email]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[email]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[nomeComprador]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedName="nomeComprador"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[nomeComprador]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[nomeComprador]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[Cpf]"
+                      cachedDataType="i8"
+                      cachedName="Cpf"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[Cpf]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Cpf]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[endereco]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="17"
+                      cachedName="endereco"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[endereco]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[endereco]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[CEP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="CEP"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[CEP]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[CEP]" />
+                    <inputColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].Columns[Pais]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Pais"
+                      externalMetadataColumnId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[Pais]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Pais]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[Id_cargas]"
+                      dataType="i2"
+                      name="Id_cargas" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[cod_Produto]"
+                      dataType="i2"
+                      name="cod_Produto" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[data_pedido]"
+                      dataType="dbTimeStamp"
+                      name="data_pedido" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[SKU]"
+                      dataType="wstr"
+                      length="6"
+                      name="SKU" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[UPC]"
+                      dataType="r4"
+                      name="UPC" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[Qntd_produto]"
+                      dataType="i2"
+                      name="Qntd_produto" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[Valor]"
+                      dataType="r4"
+                      name="Valor" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[Frete]"
+                      dataType="r4"
+                      name="Frete" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[email]"
+                      dataType="wstr"
+                      length="19"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[nomeComprador]"
+                      dataType="wstr"
+                      length="14"
+                      name="nomeComprador" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[Cpf]"
+                      dataType="i8"
+                      name="Cpf" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[endereco]"
+                      dataType="wstr"
+                      length="17"
+                      name="endereco" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[CEP]"
+                      dataType="wstr"
+                      length="9"
+                      name="CEP" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET].ExternalColumns[Pais]"
+                      dataType="wstr"
+                      length="6"
+                      name="Pais" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Upload de Dados\5SBD.Outputs[Saída de Erro de Destino ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino ADO NET"
+                  synchronousInputId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Upload de Dados\5SBD.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Upload de Dados\5SBD.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Upload de Dados\5SBD.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Upload de Dados\5SBD.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Upload de Dados\CSV File Drop"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origem de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Origem de Arquivo Simples"
+              localeId="1046"
+              name="CSV File Drop"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se colunas de comprimento zero são tratadas como nulas."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome de uma coluna de saída que contém o nome do arquivo. Se nenhum nome for especificado, nenhuma coluna de saída contendo o nome de arquivo será gerada."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Upload de Dados\CSV File Drop.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[5SBD]"
+                  connectionManagerRefId="Package.ConnectionManagers[5SBD]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples]"
+                  name="Saída de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Id_cargas]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Id_cargas]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Id_cargas]"
+                      name="Id_cargas"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[cod_Produto]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cod_Produto]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[cod_Produto]"
+                      name="cod_Produto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[data_pedido]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[data_pedido]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[data_pedido]"
+                      name="data_pedido"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[SKU]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SKU]"
+                      length="6"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[SKU]"
+                      name="SKU"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[UPC]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[UPC]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[UPC]"
+                      name="UPC"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Qntd_produto]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Qntd_produto]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Qntd_produto]"
+                      name="Qntd_produto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Valor]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Valor]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Valor]"
+                      name="Valor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Frete]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Frete]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Frete]"
+                      name="Frete"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[email]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[email]"
+                      length="19"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[email]"
+                      name="email"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[nomeComprador]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[nomeComprador]"
+                      length="14"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[nomeComprador]"
+                      name="nomeComprador"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Cpf]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Cpf]"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Cpf]"
+                      name="Cpf"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[endereco]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[endereco]"
+                      length="17"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[endereco]"
+                      name="endereco"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[CEP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[CEP]"
+                      length="9"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[CEP]"
+                      name="CEP"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Pais]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Pais]"
+                      length="6"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].Columns[Pais]"
+                      name="Pais"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Id_cargas]"
+                      dataType="i1"
+                      name="Id_cargas" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cod_Produto]"
+                      dataType="i2"
+                      name="cod_Produto" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[data_pedido]"
+                      dataType="date"
+                      name="data_pedido" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SKU]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="SKU" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[UPC]"
+                      dataType="r4"
+                      name="UPC" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Qntd_produto]"
+                      dataType="i1"
+                      name="Qntd_produto" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Valor]"
+                      dataType="r4"
+                      name="Valor" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Frete]"
+                      dataType="r4"
+                      name="Frete" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="19"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[nomeComprador]"
+                      codePage="1252"
+                      dataType="str"
+                      length="14"
+                      name="nomeComprador" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Cpf]"
+                      dataType="i8"
+                      name="Cpf" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[endereco]"
+                      codePage="1252"
+                      dataType="str"
+                      length="17"
+                      name="endereco" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[CEP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="CEP" />
+                    <externalMetadataColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Pais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="Pais" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Erro de Origem de Arquivo Simples]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Coluna de Saída de Erro de Origem de Arquivo Simples"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      name="Coluna de Saída de Erro de Origem de Arquivo Simples" />
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Upload de Dados.Paths[Saída de Origem de Arquivo Simples]"
+              endId="Package\Upload de Dados\5SBD.Inputs[Entrada de Destino ADO NET]"
+              name="Saída de Origem de Arquivo Simples"
+              startId="Package\Upload de Dados\CSV File Drop.Outputs[Saída de Origem de Arquivo Simples]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Upload de Dados"
+          TopLeft="199,23" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Upload de Dados">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Upload de Dados\CSV File Drop"
+          TopLeft="128,76" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Upload de Dados\5SBD"
+          TopLeft="153,195" />
+        <EdgeLayout
+          Id="Package\Upload de Dados.Paths[Saída de Origem de Arquivo Simples]"
+          TopLeft="204.75,118">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77"
+              Start="0,0"
+              End="0,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Upload de Dados\5SBD">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
