@@ -1,0 +1,18 @@
+﻿order-id;order-item-id;purchase-date;payments-date;buyer-email;buyer-name;cpf;buyer-phone-number;sku;upc;product-name;quantity-purchased;currency;item-price;ship-service-level;ship-address-1;ship-address-2;ship-city;ship-state;ship-postal-code;ship-country
+1;1;06/05/2024;06/05/2024;exemplo@email.com;Gustavo Barbosa;12345678901;21912345678;SKU123;1,23457E+11;Feijao;1;BRL;10.99;Padrao;Rua das Flores, 182;Apt 101;Rio de Janeiro;RJ;12345900;Brasil
+101;1;10/05/2024;10/05/2024;john@example.com ;John Doe ;12345678900;8765432109;SKU002 ;2345678;Product B;1;BRL;12.99;Padrao;Rua das Flores, 100;Apt 102;Rio de Janeiro;RJ;12345900;Brasil
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
