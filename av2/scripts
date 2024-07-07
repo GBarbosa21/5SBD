@@ -1,0 +1,112 @@
+INSERT INTO produtos (product_name, Sku, upc, item_price)
+SELECT
+    TC.[product-name],
+    TC.sku,
+    TC.upc,
+    TC.[item-price]
+FROM carga TC
+LEFT JOIN produtos PD ON TC.sku = PD.sku
+WHERE PD.sku IS NULL;
+
+
+INSERT INTO [dbo].[ItensPedidos]
+           ([order_id]
+           ,[order_item_id]
+           ,[quantity_purschased]
+           ,[currency]
+           ,[item_price]
+           ,[total_price])
+     SELECT 
+	 TC.[order-id],
+	 TC.[order-item-id],
+	 TC.[quantity-purchased],
+	 TC.[currency],
+	 TC.[item-price],
+	 TC.[item-price] * TC.[quantity-purchased] AS total_price
+	 FROM Carga TC
+
+	LEFT JOIN 
+		[dbo].[ItensPedidos] TIP ON TC.[order-id] = TIP.order_id AND TC.[order-item-id] = TIP.order_item_id
+	WHERE 
+		TIP.order_id IS NULL;
+
+
+INSERT INTO [dbo].[Pedidos]
+       ([order_id]
+       ,[order_item_id]
+       ,[purchase-date]
+       ,[payments-date]
+       ,[buyer-name]
+       ,[id_itemPedido]
+       ,[totalPedido])
+SELECT
+    TC.[order-id],
+    TC.[order-item-id],
+    TC.[purchase-date],
+    TC.[payments-date],
+    TC.[buyer-name],
+    TIP.[id_itensPedido],
+    TIP.[total_price]
+FROM 
+    Carga TC
+LEFT JOIN 
+    [dbo].[ItensPedidos] TIP ON TC.[order-id] = TIP.[order_id] AND TC.[order-item-id] = TIP.[order_item_id]
+ORDER BY 
+    TC.[order-id];
+
+
+INSERT INTO [dbo].[Entregas]
+	([order_id],
+	 [id_Pedido],
+	 [ship_service],
+	 [ship_address_1],
+	 [ship_address_2],
+	 [ship_city],
+	 [ship_country],
+	 [ship_postal_code])
+SELECT
+	TP.[order_id],
+	TP.id_itemPedido,
+	TC.[ship-service-level],
+	TC.[ship-address-1],
+	TC.[ship-address-2],
+	TC.[ship-city],
+	TC.[ship-country],
+	TC.[ship-postal-code]
+FROM
+	Pedidos TP
+JOIN
+	Carga TC ON TP.[order_id] = TC.[order-id]
+LEFT JOIN
+	dbo.Entregas TE ON TC.[order-id] = TE.[order_id]
+WHERE
+	TE.[order_id] IS NULL;
+
+
+UPDATE Entregas
+SET status = (
+    CASE
+        WHEN (
+            SELECT COUNT(*)
+            FROM ItensPedidos IP
+            INNER JOIN MovEstoque ME ON IP.[product_id] = ME.[id_produto]
+            WHERE IP.order_id = Entregas.order_id
+              AND IP.[quantity_purschased] <= ME.[quantity_estoque]
+        ) = (
+            SELECT COUNT(*)
+            FROM ItensPedidos
+            WHERE order_id = Entregas.order_id
+        ) THEN 1  -- Todos os produtos do pedido estão disponíveis
+        ELSE 2  -- Pelo menos um produto do pedido não está disponível
+    END
+);
+
+-- Atualizar o estoque para todos os pedidos confirmados
+UPDATE ME
+SET quantity_estoque = quantity_estoque - IP.[quantity_purschased]
+FROM MovEstoque ME
+INNER JOIN ItensPedidos IP ON ME.id_produto = IP.[product_id]
+INNER JOIN Entregas E ON IP.order_id = E.order_id
+WHERE E.status = 1; 
+
+
